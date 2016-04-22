@@ -1,0 +1,19 @@
+{
+  "name": "cs590mainproject",
+  "version": "1.0.0",
+  "description": "cs 590 semester API project",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mitchell-gevers/cs590MainProject.git"
+  },
+  "author": "Mitchell Gevers",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/mitchell-gevers/cs590MainProject/issues"
+  },
+  "homepage": "https://github.com/mitchell-gevers/cs590MainProject#readme"
+}
