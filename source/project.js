@@ -4,6 +4,7 @@ var imagesArray;
 var imagesLength;
 var username = localStorage.getItem("username");
 var sort = localStorage.getItem("sort");
+var apiKey = "b72b903aa3afba5c70536c77bea2971a";
 
 function onPageLoad() {
 	URLParts = location.href.split('#');
@@ -121,7 +122,6 @@ function loadContentDiv() {
 }
 
 function getEventsAJAX(searchTag, sort, successCB) {
-	var apiKey = "b72b903aa3afba5c70536c77bea2971a";
 	if(sort == "descending"){
 		sort = "desc";
 	}else{
