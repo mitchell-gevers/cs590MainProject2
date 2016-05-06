@@ -6,6 +6,7 @@ issues:
 - only tested in chrome
 - Flickr API key sometimes expires, and uses a global variable for easier replacement
 - use of global variables like this is bad practice and bothers me, i just don’t have enough time to fix it
+-website background has the word “background” written on it because i just took the image from google
 
 how to run:
 -after downloading, click on the index.html file and open with chrome

@@ -50,6 +50,7 @@ function loadDogContent(response) {
 }
 
 function loadPreferencesContent() {
+	addNameToBanner();
 	var ascending = "<h2>Preferred Settings:</h2><div class='preferencesDiv'><label>Name: </label><input type='text'  id='inputtedName' onkeyup='addNameToBanner()' placeholder='name'><form action=''><input type='radio' name='display' onclick='getDisplayOrder()' checked='checked' id='ascending' value='displayAscending'> Show Newest First<br><input type='radio' name='display' onclick='getDisplayOrder()' id='descending' value='displayDescending'> Show Oldest First<br></form></div><div class='imgDiv'><img alt='' src='images/gears.jpg'></div>";
 	var descending = "<h2>Preferred Settings:</h2><div class='preferencesDiv'><label>Name: </label><input type='text'  id='inputtedName' onkeyup='addNameToBanner()' placeholder='name'><form action=''><input type='radio' name='display' onclick='getDisplayOrder()' id='ascending' value='displayAscending'> Show Newest First<br><input type='radio' name='display' onclick='getDisplayOrder()' id='descending' checked='checked' value='displayDescending'> Show Oldest First<br></form></div><div class='imgDiv'><img alt='' src='images/gears.jpg'></div>";
 	document.getElementById("sharedButtons").innerHTML = "<button onclick='homeClick()' id='homeButton' type='button'><< Home</button>";
@@ -57,7 +58,7 @@ function loadPreferencesContent() {
 		document.getElementById("content").innerHTML = ascending;
 	else
 		document.getElementById("content").innerHTML = descending;
-	addNameToBanner();
+	
 }
 
 function loadIndexContent() {
@@ -67,10 +68,14 @@ function loadIndexContent() {
 }
 
 function addNameToBanner() {	
+	username = localStorage.getItem("username");
 	if(document.getElementById("inputtedName")){
 		username = document.getElementById("inputtedName").value;
-		localStorage.setItem("username", username);
+		if(username != null && username != "" && username != "null"){
+			localStorage.setItem("username", username);
+		}
 	}
+	console.log(username);
 	if(username == null || username == "" || username == "null"){
 		document.getElementById("username").innerHTML = "enter name in preferences";
 	}else{
